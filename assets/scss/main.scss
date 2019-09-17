@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap');
+$family-primary: "Lato", sans-serif;
+
+$beige: #eff0eb;
+$link: #339966;
+
+$body-background-color: $beige;
+$navbar-background-color: $beige;
+$box-background-color: $beige;
+
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+@import '../bulma/bulma.sass';
+
+.profile {
+    max-width: 75%;
+    border-radius: 50%;
+}

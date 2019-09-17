@@ -1,0 +1,15 @@
+{{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <script src="/js/nav.js"></script>
+    <script src="/js/email.js"></script>
+
+    <title>{{ .Site.Title }}</title>
+    <script src="https://kit.fontawesome.com/08efcee44d.js"></script>
+
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+   
+</head>

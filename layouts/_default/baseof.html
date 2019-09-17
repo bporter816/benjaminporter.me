@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!-- Generated from commit {{ getenv "REPOSITORY_URL"}}@{{ getenv "COMMIT_REF" }} -->
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <body>
+        {{ partial "nav.html" . }}
+        <section class="section">
+            <div class="container">
+                {{ block "main" . }}{{ end }}
+            </div>
+        </section>
+    </body>
+</html>

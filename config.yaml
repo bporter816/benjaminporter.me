@@ -1,0 +1,7 @@
+baseURL: "https://benjaminporter.me/"
+languageCode: "en-us"
+title: "Benjamin Porter"
+
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
