@@ -1,6 +1,3 @@
----
-title: "Home"
----
 Hi! I'm Ben. I'm a junior studying computer science and a [Turing Scholar](https://www.cs.utexas.edu/turing-scholars)
 at the University of Texas at Austin, minoring in business.
 

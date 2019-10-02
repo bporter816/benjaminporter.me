@@ -1,0 +1,41 @@
+{{ define "main" }}
+    <div class="content">
+    {{ .Content }}
+    {{ if eq .Page.Name "Music" }}
+        <h3>Recently Streamed Music</h3>
+        {{ range .Site.Data.spotify.items }}
+            <article class="media">
+                <div class="media-left">
+                    <figure class="image is-64x64">
+                        <img src="{{ (index .track.album.images 2).url }}" />
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <strong>{{ .track.name }}</strong>
+                    <br />
+                    {{ range $i, $e := .track.artists }}
+                        {{ if $i }}<br />{{ end }}
+                        {{ $e.name }}
+                    {{ end }}
+                </div>
+            </article>
+        {{ end }}
+    {{ else if eq .Page.Name "Games" }}
+        <h3>Recently Played Games</h3>
+        <p>These are games I've played on Steam during the last couple of weeks.</p>
+        {{ range .Site.Data.steam.response.games }}
+            <article class="media">
+                <div class="media-content">
+                    <img width="256" src="https://steamcdn-a.akamaihd.net/steam/apps/{{ int .appid }}/header.jpg" />
+                    <br />
+                    <strong>{{ .name }}</strong>
+                    {{ if (index $.Site.Data.game_blurbs (string .appid)) }}
+                        <br />
+                        {{ index $.Site.Data.game_blurbs (string .appid) }}
+                    {{ end }}
+                </div>
+            </article>
+        {{ end }}
+    {{ end }}
+    </div>
+{{ end }}
