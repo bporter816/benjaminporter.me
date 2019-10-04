@@ -4,6 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+    <meta name="og:site_name" content="{{ .Site.Title }}" />
+    <meta name="og:title" content="{{ .Site.Title }}" />
+    <meta name="og:url" content="{{ .Site.BaseURL }}" />
+    <meta name="og:type" content="website" />
+    <meta name="og:image" content="{{ .Site.BaseURL }}/img/me.jpg" />
+    <meta name="og:description" content="Computer Science at UT Austin" />
+
     <script src="/js/nav.js"></script>
 
     <title>{{ if .Title }}{{ .Title }} | {{ end}}{{ .Site.Title }}</title>
