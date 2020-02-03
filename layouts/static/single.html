@@ -4,7 +4,7 @@
     {{ .Content }}
     {{ if eq .Page.Name "Music" }}
         <h3>Recently Streamed Music</h3>
-        {{ range .Site.Data.spotify.items }}
+        {{ range .Site.Data.spotify }}
             <article class="media">
                 <div class="media-left">
                     <figure class="image is-64x64">
