@@ -23,11 +23,27 @@ if 'refresh_token' in res:
 
 spotify_token_type, spotify_access_token = res['token_type'], res['access_token']
 
-q = {'limit': 8}
+q = {'limit': 50}
 h = {'Authorization': f'{ spotify_token_type } { spotify_access_token }'}
 r = requests.get('https://api.spotify.com/v1/me/player/recently-played', params=q, headers=h)
 
 if r.status_code != 200:
     sys.exit(f'Error code { r.status_code } getting data from Spotify API')
 
-print(r.text)
+data = json.loads(r.text)
+
+songs = {}
+output = []
+
+for item in data['items']:
+    song_id = item['track']['id']
+    if song_id in songs:
+        songs[song_id] += 1
+    else:
+        songs[song_id] = 1
+        output.append(item)
+
+# sort by frequency, then recency
+output.sort(key=lambda x: songs[x['track']['id']], reverse=True)
+
+print(json.dumps(output[:8]))
