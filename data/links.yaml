@@ -1,7 +1,6 @@
 - name: "Email"
-  href: "#"
+  href: "mailto:benjamin.porter@utexas.edu"
   icon: "fas fa-envelope"
-  id:   "email"
 - name: "Resume"
   href: "/doc/resume.pdf"
   icon: "fas fa-file-alt"
