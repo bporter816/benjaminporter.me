@@ -1,8 +1,9 @@
 import json, os, requests, sys
 
-SPOTIFY_REFRESH_TOKEN = os.environ['SPOTIFY_REFRESH_TOKEN']
-SPOTIFY_CLIENT_ID     = os.environ['SPOTIFY_CLIENT_ID']
-SPOTIFY_CLIENT_SECRET = os.environ['SPOTIFY_CLIENT_SECRET']
+SPOTIFY_REFRESH_TOKEN = os.getenv('SPOTIFY_REFRESH_TOKEN')
+SPOTIFY_CLIENT_ID     = os.getenv('SPOTIFY_CLIENT_ID')
+SPOTIFY_CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
+SPOTIFY_COUNT         = int(os.getenv('SPOTIFY_COUNT'))
 
 spotify_auth_body = {
     'grant_type': 'refresh_token',
@@ -23,27 +24,12 @@ if 'refresh_token' in res:
 
 spotify_token_type, spotify_access_token = res['token_type'], res['access_token']
 
-q = {'limit': 50}
+q = {'limit': SPOTIFY_COUNT, 'time_range': 'short_term'}
 h = {'Authorization': f'{ spotify_token_type } { spotify_access_token }'}
-r = requests.get('https://api.spotify.com/v1/me/player/recently-played', params=q, headers=h)
+r = requests.get('https://api.spotify.com/v1/me/top/tracks', params=q, headers=h)
 
 if r.status_code != 200:
     sys.exit(f'Error code { r.status_code } getting data from Spotify API')
 
 data = json.loads(r.text)
-
-songs = {}
-output = []
-
-for item in data['items']:
-    song_id = item['track']['id']
-    if song_id in songs:
-        songs[song_id] += 1
-    else:
-        songs[song_id] = 1
-        output.append(item)
-
-# sort by frequency, then recency
-output.sort(key=lambda x: songs[x['track']['id']], reverse=True)
-
-print(json.dumps(output[:8]))
+print(json.dumps(data['items']))
