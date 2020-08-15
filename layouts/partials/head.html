@@ -1,6 +1,7 @@
 {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
 
 <head>
+    <meta name="build_time" content="{{ now.Format "2006-01-02 15:04:05 MST" }}" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -13,7 +14,7 @@
 
     <script src="/js/nav.js"></script>
 
-    <title>{{ if .Title }}{{ .Title }} | {{ end}}{{ .Site.Title }}</title>
+    <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
     <script src="https://kit.fontawesome.com/08efcee44d.js"></script>
 
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
