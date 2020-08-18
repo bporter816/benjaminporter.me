@@ -1,16 +1,21 @@
-Hi! I'm Ben. I'm a junior studying computer science and a [Turing Scholar](https://www.cs.utexas.edu/turing-scholars)
-at the University of Texas at Austin, minoring in business.
+Hi! I'm Ben. I study computer science at the University of Texas at Austin.
+I'm graduating in May 2021, and I'm looking for full-time job opportunities.
+In my free time, I love to practice the violin, play video games, and cook.
 
-I'm interested in backend development, system scalability/reliability, and security. My work experience and classes have
-given me a good foundation in these areas, and I'm always eager to learn more!
+Most of my experience and interest is in backend development, and I'm also interested in scalability and security.
+I have a good foundation in these areas from school and work, and I'm always looking to learn more.
+I'm currently exploring virtualization, information retrieval, and security.
 
-I've recently started exploring network security, primarily exploring it through the lens of the browser. It's a
-fascinating field that's ever relevant, and it's introduced me to some of the most clever applications of programming
-I've ever seen. I compete in biweekly capture-the-flag contests hosted by [ISSS](https://isss.io), a security org at UT.
+This past summer, I interned at [Koddi](https://koddi.com/), helping to build out the initial version of a unified
+product platform implemented using a distributed message queue system in Go. I was integrated closely with my team, and
+I got to make very meaningful contributions across the platform, including real-time bot detection and changes to
+the code managing spend budgets for ad campaigns.
 
-Last summer, I interned at [WP Engine](https://wpengine.com), implementing an error-tolerant approach to synchronizing
-invoices between the billing and accounting services used at the company.
-I also worked at [Parasol Laboratory](https://parasol.tamu.edu) several years ago, doing research in robotics and
-computational biology.
+Last year, I interned at [WP Engine](https://wpengine.com/), working on an error-tolerant approach for synchronizing
+invoices between the billing and accounting services used there. The goal was to reduce the manual work needed to close
+the books at the end of each month.
 
-Feel free to check out the links above or send me an email if you want to get in touch with me.
+I also worked at [Parasol Laboratory](https://parasol.tamu.edu/) for a summer during high school, where I contributed to
+a research project simulating protein binding with robot pathfinding algorithms.
+
+Feel free to [say hi](mailto:benjamin.porter@utexas.edu) or take a look around! 🙂

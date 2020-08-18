@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <div class="columns">
+    <div class="columns is-vcentered">
         <div class="column has-text-centered is-12-mobile is-5-tablet is-5-desktop">
             <div class="is-inline-block">
                 <img class="profile" src="img/me.jpg" width="256" height="256" />
@@ -10,7 +10,7 @@
             <p>CS @ UT Austin</p>
             <nav class="level is-mobile">
                 {{ range .Site.Data.links }}
-                    <a {{ if .id }} id="{{ .id }}" {{ end }} class="level-item is-link" href="{{ .href }}">
+                    <a class="level-item is-link" href="{{ .href }}">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="{{ .icon }} fa-stack-1x fa-inverse"></i>
@@ -23,5 +23,4 @@
     <div class="column content">
         {{ .Content }}
     </div>
-    <script src="/js/email.js"></script>
 {{ end }}
