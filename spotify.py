@@ -8,8 +8,10 @@ SPOTIFY_COUNT         = int(os.getenv('SPOTIFY_COUNT'))
 
 if SPOTIFY_ENDPOINT == 'recent':
     endpoint = '/player/recently-played'
+    q = {'limit': 50}
 elif SPOTIFY_ENDPOINT == 'top':
     endpoint = '/top/tracks'
+    q = {'limit': SPOTIFY_COUNT, 'time_range': 'short_term'}
 else:
     sys.exit(f'Invalid SPOTIFY_ENDPOINT value "{ SPOTIFY_ENDPOINT }", valid values are "recent" and "top"')
 
@@ -32,7 +34,6 @@ if 'refresh_token' in res:
 
 spotify_token_type, spotify_access_token = res['token_type'], res['access_token']
 
-q = {'limit': 50 if SPOTIFY_ENDPOINT == 'recent' else SPOTIFY_COUNT, 'time_range': 'short_term'}
 h = {'Authorization': f'{ spotify_token_type } { spotify_access_token }'}
 r = requests.get(f'https://api.spotify.com/v1/me{ endpoint }', params=q, headers=h)
 
