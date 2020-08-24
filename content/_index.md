@@ -6,8 +6,9 @@ Most of my experience and interest is in backend development, and I'm also inter
 I have a good foundation in these areas from school and work, and I'm always looking to learn more.
 I'm currently exploring virtualization, information retrieval, and security.
 
-This past summer, I interned at [Koddi](https://koddi.com/), helping to build out the initial version of a unified
-product platform implemented using a distributed message queue system in Go. I was integrated closely with my team, and
+I currently work part-time at [Koddi](https://koddi.com/), helping to build out the initial version of a unified
+product platform implemented using a distributed message queue system in Go.
+I also interned there this past summer, and was integrated closely with my team.
 I got to make very meaningful contributions across the platform, including real-time bot detection and changes to
 the code managing spend budgets for ad campaigns.
 
