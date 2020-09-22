@@ -23,17 +23,12 @@
         {{ end }}
     {{ else if eq .Page.Name "Games" }}
         <h3>Recently Played Games</h3>
-        <p>These are games I've played on Steam during the past couple of weeks.</p>
         {{ range .Site.Data.steam.response.games }}
             <article class="media">
                 <div class="media-content">
                     <img width="256" src="https://steamcdn-a.akamaihd.net/steam/apps/{{ int .appid }}/header.jpg" />
                     <br />
                     <strong>{{ .name }}</strong>
-                    {{ if (index $.Site.Data.game_blurbs (string .appid)) }}
-                        <br />
-                        {{ index $.Site.Data.game_blurbs (string .appid) }}
-                    {{ end }}
                 </div>
             </article>
         {{ end }}

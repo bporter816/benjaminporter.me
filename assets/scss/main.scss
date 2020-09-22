@@ -3,6 +3,7 @@ $family-primary: "Lato", sans-serif;
 
 $beige: #eff0eb;
 $link: #339966;
+$link-hover: $link;
 
 $body-background-color: $beige;
 $navbar-background-color: $beige;
@@ -12,10 +13,19 @@ $widescreen-enabled: false;
 $fullhd-enabled: false;
 
 $navbar-dropdown-background-color: $beige;
+$navbar-dropdown-item-hover-color: $link;
 
 @import '../bulma/bulma.sass';
 
 .profile {
     max-width: 75%;
     border-radius: 50%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover:not(.no-ul) {
+    text-decoration: underline;
 }
