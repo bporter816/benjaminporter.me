@@ -1,4 +1,4 @@
-import os, requests, sys
+import json, os, requests, sys
 
 STEAM_API_KEY = os.getenv('STEAM_API_KEY')
 STEAM_USER    = os.getenv('STEAM_USER_ID')
@@ -10,4 +10,5 @@ r = requests.get('http://api.steampowered.com/IPlayerService/GetRecentlyPlayedGa
 if r.status_code != 200:
     sys.exit(f'Error code { r.status_code } getting data from Steam API')
 
-print(r.text)
+data = json.loads(r.text)
+print(json.dumps(data['response']['games']))

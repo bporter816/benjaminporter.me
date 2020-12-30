@@ -2,7 +2,7 @@
     <div class="content">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
-    {{ if eq .Page.Name "Music" }}
+    {{ if and (eq .Page.Name "Music") (gt (len .Site.Data.spotify) 0) }}
         <h3>Recently Streamed Music</h3>
         {{ range .Site.Data.spotify }}
             <article class="media">
@@ -21,9 +21,9 @@
                 </div>
             </article>
         {{ end }}
-    {{ else if eq .Page.Name "Games" }}
+    {{ else if and (eq .Page.Name "Games") (gt (len .Site.Data.steam) 0) }}
         <h3>Recently Played Games</h3>
-        {{ range .Site.Data.steam.response.games }}
+        {{ range .Site.Data.steam }}
             <article class="media">
                 <div class="media-content">
                     <img width="256" src="https://steamcdn-a.akamaihd.net/steam/apps/{{ int .appid }}/header.jpg" />
