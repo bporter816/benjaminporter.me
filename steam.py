@@ -11,4 +11,7 @@ if r.status_code != 200:
     sys.exit(f'Error code { r.status_code } getting data from Steam API')
 
 data = json.loads(r.text)
-print(json.dumps(data['response']['games']))
+if 'games' in data['response']:
+    print(json.dumps(data['response']['games']))
+else:
+    print(json.dumps([]))
