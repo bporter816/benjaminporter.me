@@ -29,3 +29,13 @@ a {
 a:hover:not(.no-ul) {
     text-decoration: underline;
 }
+
+::-moz-selection {
+    background: $link;
+    color: $beige;
+}
+
+::selection {
+    background: $link;
+    color: $beige;
+}

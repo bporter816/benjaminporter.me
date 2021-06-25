@@ -10,12 +10,22 @@
     <meta name="og:url" content="{{ .Site.BaseURL }}" />
     <meta name="og:type" content="website" />
     <meta name="og:image" content="{{ .Site.BaseURL }}/img/me.jpg" />
-    <meta name="og:description" content="Computer Science at UT Austin" />
-
-    <script src="/js/nav.js"></script>
+    <meta name="og:description" content="{{ .Site.Params.Tagline }}" />
 
     <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
-    <script src="https://kit.fontawesome.com/08efcee44d.js"></script>
+
+{{ range (readDir "static/js") }}
+    <script src="/js/{{ .Name }}"></script>
+{{ end }}
+
+    <script>
+        var imgs = [
+{{ range (readDir "static/img/profile") }}
+            "{{ .Name }}",
+{{ end }}
+        ];
+    </script>
 
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
+    <script src="https://kit.fontawesome.com/08efcee44d.js"></script>
 </head>

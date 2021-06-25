@@ -2,6 +2,9 @@ baseURL: "https://benjaminporter.me"
 languageCode: "en-us"
 title: "Benjamin Porter"
 
+params:
+  tagline: "Software Engineer at Affirm"
+
 disableKinds:
   - taxonomy
   - taxonomyTerm

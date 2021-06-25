@@ -2,25 +2,21 @@
     <div class="columns is-vcentered">
         <div class="column has-text-centered is-12-mobile is-5-tablet is-5-desktop">
             <div class="is-inline-block">
-                <img class="profile" src="img/me.jpg" width="256" height="256" />
+                <img id="profile" class="profile" src="/img/profile/0.jpg" width="256" height="256" />
             </div>
         </div>
         <div id="info-col" class="column content has-text-centered is-12-mobile is-5-tablet is-5-desktop">
             <h1>Benjamin Porter</h1>
-            <p>
-                Computer Science at UT Austin
-                <br />
-                Software Development Intern at Koddi
-            </p>
+            <p>{{ .Site.Params.Tagline }}</p>
             <nav class="level is-mobile">
-                {{ range .Site.Data.links }}
-                    <a class="no-ul level-item is-link" href="{{ .href }}">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="{{ .icon }} fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                {{ end }}
+            {{ range .Site.Data.links }}
+                <a class="no-ul level-item is-link" href="{{ .href }}">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="{{ .icon }} fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            {{ end }}
             </nav>
         </div>
     </div>
