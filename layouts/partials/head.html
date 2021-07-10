@@ -9,7 +9,7 @@
     <meta name="og:title" content="{{ .Site.Title }}" />
     <meta name="og:url" content="{{ .Site.BaseURL }}" />
     <meta name="og:type" content="website" />
-    <meta name="og:image" content="{{ .Site.BaseURL }}/img/me.jpg" />
+    <meta name="og:image" content="{{ .Site.BaseURL }}/img/profile/0.jpg" />
     <meta name="og:description" content="{{ .Site.Params.Tagline }}" />
 
     <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
@@ -24,6 +24,14 @@
             "{{ .Name }}",
 {{ end }}
         ];
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126124686-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-126124686-1');
     </script>
 
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
