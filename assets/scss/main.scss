@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap');
-$family-primary: "Lato", sans-serif;
-
-$beige: #eff0eb;
-$link: #339966;
-$link-hover: $link;
-
-$body-background-color: $beige;
-$navbar-background-color: $beige;
-$box-background-color: $beige;
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+$family-primary: "Quicksand", sans-serif;
 
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
-$navbar-dropdown-background-color: $beige;
+$bg: #f1f1ff;
+$link: #93b7de;
+$accent: #785964;
+$link-hover: $link;
+
+$body-background-color: $bg;
+
+$navbar-background-color: $bg;
+$navbar-item-hover-background-color: $bg;
+$navbar-dropdown-background-color: $bg;
 $navbar-dropdown-item-hover-color: $link;
+$navbar-dropdown-item-hover-background-color: $bg;
 
 @import '../bulma/bulma.sass';
 
@@ -24,6 +26,7 @@ $navbar-dropdown-item-hover-color: $link;
 
 a {
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover:not(.no-ul) {
@@ -32,10 +35,10 @@ a:hover:not(.no-ul) {
 
 ::-moz-selection {
     background: $link;
-    color: $beige;
+    color: $bg;
 }
 
 ::selection {
     background: $link;
-    color: $beige;
+    color: $bg;
 }
