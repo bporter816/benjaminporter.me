@@ -15,9 +15,12 @@
     <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 
 {{ range (readDir "static/js") }}
+{{ if or (not (eq .Name "home.js")) $.IsHome }}
     <script src="/js/{{ .Name }}"></script>
 {{ end }}
+{{ end }}
 
+{{ if .IsHome }}
     <script>
         var imgs = [
 {{ range (readDir "static/img/profile") }}
@@ -25,6 +28,7 @@
 {{ end }}
         ];
     </script>
+{{ end }}
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126124686-1"></script>
     <script>
