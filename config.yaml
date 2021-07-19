@@ -5,6 +5,8 @@ title: "Benjamin Porter"
 params:
   tagline: "Software Engineer at Affirm"
 
+enableGitInfo: true
+
 disableKinds:
   - taxonomy
   - taxonomyTerm
