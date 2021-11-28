@@ -1,7 +1,12 @@
 var imgsIndex = 0;
+var taglineIndex = 0;
 
 setInterval(() => {
-    var elem = document.getElementById("profile");
+    var imgsElem = document.getElementById("profile");
     imgsIndex = (imgsIndex + 1) % imgs.length;
-    elem.src = `/img/profile/${imgs[imgsIndex]}`;
+    imgsElem.src = `/img/profile/${imgs[imgsIndex]}`;
+
+    var taglineElem = document.getElementById("tagline");
+    taglineIndex = (taglineIndex + 1) % taglines.length;
+    taglineElem.innerHTML = taglines[taglineIndex];
 }, 5000);

@@ -10,7 +10,7 @@
     <meta name="og:url" content="{{ .Site.BaseURL }}" />
     <meta name="og:type" content="website" />
     <meta name="og:image" content="{{ .Site.BaseURL }}/img/profile/0.jpg" />
-    <meta name="og:description" content="{{ .Site.Params.Tagline }}" />
+    <meta name="og:description" content="{{ index .Site.Params.Tagline 0 }}" />
 
     <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 
@@ -25,6 +25,11 @@
         var imgs = [
 {{ range (readDir "static/img/profile") }}
             "{{ .Name }}",
+{{ end }}
+        ];
+        var taglines = [
+{{ range .Site.Params.Tagline }}
+            "{{ . }}",
 {{ end }}
         ];
     </script>

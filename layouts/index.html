@@ -7,7 +7,7 @@
         </div>
         <div id="info-col" class="column has-text-centered is-12-mobile is-5-tablet is-5-desktop">
             <h1>Benjamin Porter</h1>
-            <p>{{ .Site.Params.Tagline }}</p>
+            <p id="tagline">{{ index .Site.Params.Tagline 0 }}</p>
             <nav class="level is-mobile">
             {{ range .Site.Data.links }}
                 <a class="no-ul level-item is-link" href="{{ .href }}">

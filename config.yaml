@@ -1,9 +1,11 @@
-baseURL: "https://benjaminporter.me"
-languageCode: "en-us"
-title: "Benjamin Porter"
+baseURL: https://benjaminporter.me
+languageCode: en-us
+title: Benjamin Porter
 
 params:
-  tagline: "Software Engineer at Affirm"
+  tagline:
+    - Software Engineer at Affirm
+    - Terraform Writer at Affirm
 
 enableGitInfo: true
 
