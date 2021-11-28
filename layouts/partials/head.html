@@ -32,6 +32,14 @@
             "{{ . }}",
 {{ end }}
         ];
+        var emoji = [
+{{ range .Site.Params.Emoji }}
+            "{{ . }}",
+{{ end }}
+{{ if (eq now.Month 6) }}
+            "🏳️‍🌈",
+{{ end }}
+        ];
     </script>
 {{ end }}
 

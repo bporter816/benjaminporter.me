@@ -6,6 +6,11 @@ params:
   tagline:
     - Software Engineer at Affirm
     - Terraform Writer at Affirm
+  emoji:
+    - 🍓
+    - 🌮
+    - 🎻
+    - 🐈
 
 enableGitInfo: true
 
