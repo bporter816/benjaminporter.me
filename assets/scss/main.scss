@@ -47,3 +47,7 @@ a:hover:not(.no-ul) {
     background: $link;
     color: $bg;
 }
+
+.upside-down {
+    transform: rotate(180deg);
+}
