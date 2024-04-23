@@ -1,9 +1,19 @@
-baseURL: "https://benjaminporter.me"
-languageCode: "en-us"
-title: "Benjamin Porter"
+baseURL: https://benjaminporter.me
+languageCode: en-us
+title: Benjamin Porter
 
 params:
-  tagline: "Software Engineer at Affirm"
+  tagline:
+    - Software Engineer
+    - Terraform Engineer
+    - YAML Engineer
+  emoji:
+    - 🍓
+    - 🌮
+    - 🎻
+    - 🐈
+
+enableGitInfo: true
 
 disableKinds:
   - taxonomy

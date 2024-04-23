@@ -13,5 +13,5 @@ document.addEventListener("keydown", function onEvent(event) {
 });
 
 function konami() {
-    alert(":)");
+    document.getElementById("body").classList.toggle("upside-down");
 }

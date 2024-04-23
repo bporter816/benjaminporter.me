@@ -10,3 +10,8 @@ music and games from the Spotify and Steam APIs. The responses are placed in the
 layouts.
 
 Netlify rebuilds the site every night at midnight to update the dynamic content.
+
+# Notes
+
+* When deploying to Netlify with the 20.04 Focal image, the extended version of Hugo, which is needed to compile Sass,
+isn't installed by default. Manually setting the `HUGO_VERSION` environment variable seems to fix it.
