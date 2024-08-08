@@ -23,5 +23,6 @@ function konami() {
       break;
     default:
       alert("Oops");
+      break;
   }
 }
